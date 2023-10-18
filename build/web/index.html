@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Shop Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="icon/59307bddccae01b24826684724771a41.ico" type="image/x-icon">
+    <style>
+        /* Centrar botones en el centro de la pantalla */
+        .center-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            gap: 40px; /* Espaciado incrementado entre botones */
+        }
+
+        /* Estilos personalizados para efecto sorprendente */
+        .btn-custom {
+            width: 200px; /* Ancho fijo */
+            height: 60px; /* Alto fijo */
+            border: none;
+            border-radius: 50px; /* Bordes redondeados */
+            padding: 15px 30px; /* Espaciado interior más amplio */
+            position: relative; /* Para efecto de sombra */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Efectos al hacer hover */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px); /* Mueve el botón ligeramente hacia arriba al pasar el ratón */
+            box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.3); /* Sombra más profunda al pasar el ratón */
+        }
+
+        .btn-mysql {
+            background-color: #F57C00; /* Color naranja para MySQL */
+            color: #fff;
+        }
+
+        .btn-mysql:hover {
+            background-color: #FF8F40; /* Color naranja más claro al hacer hover */
+        }
+
+        .btn-postgresql {
+            background-color: #336791; /* Color azul para PostgreSQL */
+            color: #fff;
+        }
+
+        .btn-postgresql:hover {
+            background-color: #4C8BAD; /* Color azul más claro al hacer hover */
+        }
+
+        .btn-mongodb {
+            background-color: #4CAF50; /* Color verde para MongoDB */
+            color: #fff;
+        }
+
+        .btn-mongodb:hover {
+            background-color: #6FD273; /* Color verde más claro al hacer hover */
+        }
+
+    </style>
+</head>
+<body class="bg-dark text-white">
+    <div class="center-screen">
+        <!-- Botones con estilo personalizado y colores específicos -->
+        <a href="ControladorProducto?action=listar&db=mysql" class="btn btn-custom btn-mysql">MySQL</a>
+        <a href="ControladorProducto?action=listar&db=postgresql" class="btn btn-custom btn-postgresql">PostgreSQL</a>
+        <a href="ControladorProducto?action=listar&db=mongodb" class="btn btn-custom btn-mongodb">MongoDB</a>
+    </div>
+
+    <!-- Opcional: Bootstrap JS (si deseas funcionalidades JS de Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
